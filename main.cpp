@@ -36,6 +36,10 @@ int main(int argc, char const *argv[]) {
 	SortingAlgorithm sort;
 	// Calculate time of execution of each algorithm
 	sort.timeOfExecution("bubble", sort, array, size);
+	sort.timeOfExecution("cocktail", sort, array, size);
+	sort.timeOfExecution("insertion", sort, array, size);
+	//sort.timeOfExecution("bucket", sort, array, size);// segmentation fault
+	sort.timeOfExecution("merge", sort, array, size);
 
 	delete[] array;
 	return 0;

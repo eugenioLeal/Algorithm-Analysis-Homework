@@ -18,66 +18,6 @@ void readWithRandom(int *arr, int size, std::ifstream& read);
 void menu(int *arr, int size, int min, int max, SortingAlgorithm sort);
 void printArray(int *arr, int size);
 
-// struct Node
-// {
-//     int key;
-//     struct Node *left, *right;
-// };
-//
-// // A utility function to create a new BST Node
-// struct Node *newNode(int item)
-// {
-//     struct Node *temp = new Node;
-//     temp->key = item;
-//     temp->left = temp->right = NULL;
-//     return temp;
-// }
-//
-// // Stores inoder traversal of the BST
-// // in arr[]
-// void storeSorted(Node *root, int arr[], int &i)
-// {
-//     if (root != NULL)
-//     {
-//         storeSorted(root->left, arr, i);
-//         arr[i++] = root->key;
-//         storeSorted(root->right, arr, i);
-//     }
-// }
-//
-// /* A utility function to insert a new
-//    Node with given key in BST */
-// Node* insert(Node* node, int key)
-// {
-//     /* If the tree is empty, return a new Node */
-//     if (node == NULL) return newNode(key);
-//
-//     /* Otherwise, recur down the tree */
-//     if (key < node->key)
-//         node->left  = insert(node->left, key);
-//     else if (key > node->key)
-//         node->right = insert(node->right, key);
-//
-//     /* return the (unchanged) Node pointer */
-//     return node;
-// }
-//
-// // This function sorts arr[0..n-1] using Tree Sort
-// void binaryTree(int arr[], int n)
-// {
-//     struct Node *root = NULL;
-//
-//     // Construct the BST
-//     root = insert(root, arr[0]);
-//     for (int i=1; i<n; i++)
-//         insert(root, arr[i]);
-//
-//     // Store inoder traversal of the BST
-//     // in arr[]
-//     int i = 0;
-//     storeSorted(root, arr, i);
-// }
-
 int main(int argc, char const *argv[]) {
 
 	// Initialize variables
@@ -265,26 +205,3 @@ void printArray(int *arr, int size) {
 	}
 	std::cout << "]\n" << '\n';
 }
-
-// Calculate time of execution of each algorithm
-// sort.timeOfExecution("bubble", sort, array, size);
-// printArray(array, size);
-//sort.timeOfExecution("cocktail", sort, array, size);
-// sort.timeOfExecution("insertion", sort, array, size);
-// printArray(array, size);
-// //sort.timeOfExecution("bucket", sort, array, size);// segmentation fault
-// sort.timeOfExecution("merge", sort, array, size);
-// sort.timeOfExecution("selection", sort, array, size);
-
-// try {
-// 	int *array = new int[size];
-// }
-// catch( exception &e ) {
-// 	std::cout << "Standard Exception: " << e.what() << '\n';
-// }
-
-// clock_t t = clock();
-// sort.bubble(array, size);
-// t = clock() - t;
-// std::cout << "It took " << t << " clicks or (" << ((float)t)/CLOCKS_PER_SEC << ")" << '\n';
-// printf ("It took me %ld clicks (%f seconds).\n",t,((float)t)/CLOCKS_PER_SEC);
